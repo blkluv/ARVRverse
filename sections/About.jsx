@@ -26,19 +26,17 @@ const About = () => (
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
-        <span className="font-extrabold text-white">Metaverse</span> is a new
-        thing in the future, where you can enjoy the virtual world by feeling
-        like it's really real, you can feel what you feel in this metaverse
-        world, because this is really{' '}
+        <span className="font-extrabold text-white">Metarvrtise</span> is a new
+        ARVRtising channel that allows you remove the ego and enjoy doing 
+        business in the virtual world. Network, chat, chill while attending
+        public or private events that can lead to new partnerships in the
+        real world, because anything is possible {' '}
         <span className="font-extrabold text-white">
-          the madness of the metaverse
+          when you use your imagination
         </span>{' '}
-        of today, using only{' '}
-        <span className="font-extrabold text-white">VR </span>
-        devices you can easily{' '}
-        <span className="font-extrabold text-white">explore</span>
-        the metaverse world you want, turn your dreams into reality. Let's
-        explore the madness of the metaverse by scrolling down
+        in the business world{' '}
+         or in the Metarvrtise world you want ARVRtise in. We have one rule
+         Positive vibes only, were all adults so lets act accordingly. 
       </motion.p>
 
       {/* the motion arrow down image */}

@@ -16,20 +16,19 @@ const Hero = () => (
     >
       {/* the two texts in the hero section */}
       <div className="relative z-10 flex flex-col items-center justify-center">
-        {/* the top text */}
-        <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
-          Metaverse
-        </motion.h1>
-        {/* the bottom text */}
-        <motion.div
-          variants={textVariant(1.2)}
-          className="flex flex-row items-center justify-center"
-        >
-          <h1 className={styles.heroHeading}>Ma</h1>
-          <div className={styles.heroDText} />
-          <h1 className={styles.heroHeading}>Ness</h1>
-        </motion.div>
-      </div>
+  {/* the top text */}
+  <motion.h1 variants={textVariant(1.1)} className={styles.heroHeading}>
+    Metarvrtise
+  </motion.h1>
+  {/* the bottom text */}
+  <motion.div
+    variants={textVariant(1.2)}
+    className="flex flex-row items-center justify-center"
+  >
+    <h1 className={styles.heroHeading}>AR</h1>
+    <h1 className={styles.heroHeading}>VRtising</h1>
+  </motion.div>
+</div>
 
       {/* the cool image in the hero section */}
       <motion.div
