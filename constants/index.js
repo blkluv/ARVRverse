@@ -57,7 +57,7 @@ export const insights = [
     imgUrl: '/planet-06.png',
     title: 'Join our Linked ARVRtise group',
     subtitle:
-      'Tap in to the latest and greatest ARVRtising news, memes and events in our ARVRtise group.',
+      'Tap into the latest and greatest ARVRtising news, memes and events in our ARVRtise group.',
     url: 'https://www.linkedin.com/groups/9068432/',
   },
   {
@@ -71,7 +71,7 @@ export const insights = [
     imgUrl: '/planet-08.png',
     title: 'Customize Your Metaverse',
     subtitle:
-      'Are you looking to onboard your brand to the metaverse in a customized enviroment? Contact us to make it a reality.',
+      'Are you looking to onboard your brand to the metaverse in a customized environment? Contact us to make it a reality.',
     url: 'https://www.arvrtise.com/custom-arvrtise-metaverse/',
   },
 ];
