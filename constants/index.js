@@ -33,61 +33,64 @@ export const exploreWorlds = [
 
 export const startingFeatures = [
   'Find a world that suits you and you want to enter',
-  'Enter the world by reading basmalah to be safe',
+  'Enter the world with positive intentions thinking with your heart',
   'No need to beat around the bush, just stay on the gas and have fun',
 ];
 
 export const newFeatures = [
   {
     imgURL: '/vrpano.svg',
-    title: 'A new world',
+    title: 'Event Line Up',
     subtitle:
-      'we have the latest update with new world for you to try never mind',
+      'We will announce our partnerships with brands, creators, and innovators',
   },
   {
     imgURL: '/headset.svg',
-    title: 'More realistic',
+    title: 'Live VR Events',
     subtitle:
-      'In the latest update, your eyes are narrow, making the world more realistic than ever',
+      'We are bringing the metaverse to a local city near you with a series of VR events.',
   },
 ];
 
 export const insights = [
   {
     imgUrl: '/planet-06.png',
-    title: 'The launch of the Metaverse makes Elon musk ketar-ketir',
+    title: 'Join our Linked ARVRtise group',
     subtitle:
-      'Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Diam maecenas sed enim ut sem viverra alique.',
+      'Tap in to the latest and greatest ARVRtising news, memes and events in our ARVRtise group.',
+    url: 'https://www.linkedin.com/groups/9068432/',
   },
   {
     imgUrl: '/planet-07.png',
-    title: '7 tips to easily master the madness of the Metaverse',
+    title: 'ARVRtise blog',
     subtitle:
-      'Vitae congue eu consequat ac felis donec. Et magnis dis parturient montes nascetur ridiculus mus. Convallis tellus id interdum',
+      'Tap into the latest AI, AR, NFT, VR, XR news.',
+    url: 'https://www.arvrtise.com/blog-standard/',
   },
   {
     imgUrl: '/planet-08.png',
-    title: 'With one platform you can explore the whole world virtually',
+    title: 'Customize Your Metaverse',
     subtitle:
-      'Quam quisque id diam vel quam elementum. Viverra nam libero justo laoreet sit amet cursus sit. Mauris in aliquam sem',
+      'Are you looking to onboard your brand to the metaverse in a customized enviroment? Contact us to make it a reality.',
+    url: 'https://www.arvrtise.com/custom-arvrtise-metaverse/',
   },
 ];
 
 export const socials = [
   {
     name: 'twitter',
-    url: '/twitter.svg',
+    url: 'https://twitter.com/arvrtise',
   },
   {
     name: 'linkedin',
-    url: '/linkedin.svg',
+    url: 'https://linkedin.com/showcase/arvrtise',
   },
   {
     name: 'instagram',
-    url: '/instagram.svg',
+    url: 'https://instagram.com/arvrtise',
   },
   {
     name: 'facebook',
-    url: '/facebook.svg',
+    url: 'https://facebook.com',
   },
 ];
