@@ -27,16 +27,15 @@ const About = () => (
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
         <span className="font-extrabold text-white">Metarvrtise</span> is a new
-        ARVRtising channel that allows you remove the ego and enjoy doing 
-        business in the virtual world. Network, chat, chill while attending
-        public or private events that can lead to new partnerships in the
-        real world, because anything is possible {' '}
+        ARVRtising channel that allows you to remove the ego and enjoy doing 
+        business in the virtual world. Network, chat, and relax while participating 
+        in public or private events that can potentially lead to new partnerships 
+        in the real world. In the business world or in the Metarvrtise world where 
+        you choose to ARVRtise, anything is possible {' '}
         <span className="font-extrabold text-white">
           when you use your imagination
-        </span>{' '}
-        in the business world{' '}
-         or in the Metarvrtise world you want ARVRtise in. We have one rule
-         Positive vibes only, were all adults so lets act accordingly. 
+        </span>{' '}We have one rule:{' '}
+         Positive vibes only, were all adults, so let's act accordingly. 
       </motion.p>
 
       {/* the motion arrow down image */}
