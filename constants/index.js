@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import dynamic from 'next/dynamic';
 
 export const exploreWorlds = [
   {
@@ -36,13 +37,8 @@ export const exploreWorlds = [
 const ExploreWorlds = () => {
   useEffect(() => {
     const renderClickableImages = async () => {
-      if (typeof document === 'undefined') return;
-
-      const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
-
-      if (!exploreWorldsContainer) return;
-
       const { default: imagesLoaded } = await import('imagesloaded');
+      const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
 
       imagesLoaded(exploreWorldsContainer, () => {
         // Images have finished loading
@@ -50,27 +46,29 @@ const ExploreWorlds = () => {
       });
     };
 
-    renderClickableImages();
+    if (typeof window !== 'undefined') {
+      renderClickableImages();
+    }
   }, []);
 
   return (
     <div id="exploreWorldsContainer">
-      {typeof document !== 'undefined' &&
-        exploreWorlds.map((world) => (
-          <a key={world.id} href={world.url} target="_blank">
-            <img src={world.imgUrl} alt={world.title} />
-          </a>
-        ))}
+      {exploreWorlds.map((world) => (
+        <a key={world.id} href={world.url} target="_blank">
+          <img src={world.imgUrl} alt={world.title} />
+        </a>
+      ))}
     </div>
   );
 };
 
 const HomePage = () => {
-  // Other components or logic for the homepage
+  const DynamicExploreWorlds = dynamic(() => import('./ExploreWorlds'), { ssr: false });
+
   return (
     <div>
       {/* Other content */}
-      <ExploreWorlds />
+      <DynamicExploreWorlds />
       {/* Other content */}
     </div>
   );
