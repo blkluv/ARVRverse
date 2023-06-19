@@ -1,4 +1,5 @@
-// Updated exploreWorlds array with clickable imgUrls
+import { useEffect } from 'react';
+
 export const exploreWorlds = [
   {
     id: 'world-1',
@@ -32,87 +33,33 @@ export const exploreWorlds = [
   },
 ];
 
-// Generating HTML with clickable images
-const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
+const ExploreWorlds = () => {
+  useEffect(() => {
+    const renderClickableImages = async () => {
+      const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
 
-exploreWorlds.forEach(world => {
-  const { imgUrl, title, url } = world;
-  const anchor = document.createElement('a');
-  anchor.href = url;
-  anchor.target = '_blank';
+      if (!exploreWorldsContainer) return;
 
-  const image = document.createElement('img');
-  image.src = imgUrl;
-  image.alt = title;
+      const { default: imagesLoaded } = await import('imagesloaded');
 
-  anchor.appendChild(image);
-  exploreWorldsContainer.appendChild(anchor);
-});
+      imagesLoaded(exploreWorldsContainer, () => {
+        // Images have finished loading
+        // Implement any logic you need here
+      });
+    };
 
-// Rest of the code...
+    renderClickableImages();
+  }, []);
 
-// Starting features array
-export const startingFeatures = [
-  'Find a world that suits you and you want to enter',
-  'Enter the world with positive intentions thinking with your heart',
-  'No need to beat around the bush, just stay on the gas and have fun',
-];
+  return (
+    <div id="exploreWorldsContainer">
+      {exploreWorlds.map((world) => (
+        <a key={world.id} href={world.url} target="_blank">
+          <img src={world.imgUrl} alt={world.title} />
+        </a>
+      ))}
+    </div>
+  );
+};
 
-// New features array
-export const newFeatures = [
-  {
-    imgURL: '/vrpano.svg',
-    title: 'Event Line Up',
-    subtitle:
-      'We will announce our partnerships with brands, creators, and innovators',
-  },
-  {
-    imgURL: '/headset.svg',
-    title: 'Live VR Events',
-    subtitle:
-      'We are bringing the metaverse to a local city near you with a series of VR events.',
-  },
-];
-
-// Insights array
-export const insights = [
-  {
-    imgUrl: '/planet-06.png',
-    title: 'Join our Linked ARVRtise group',
-    subtitle:
-      'Tap into the latest and greatest ARVRtising news, memes and events in our ARVRtise group <a href="https://www.linkedin.com/groups/9068432/" target="_blank">here</a>.',
-  },
-  {
-    imgUrl: '/planet-07.png',
-    title: 'ARVRtise blog',
-    subtitle:
-      'Tap into the latest AI, AR, NFT, VR, XR news <a href="https://www.arvrtise.com/blog-standard/" target="_blank">here</a>.',
-  },
-  {
-    imgUrl: '/planet-08.png',
-    title: 'Customize Your Metaverse',
-    subtitle:
-      'Are you looking to onboard your brand to the metaverse in a customized environment? Contact us to make it a reality <a href="https://www.arvrtise.com/custom-arvrtise-metaverse/" target="_blank">here</a>.',
-  },
-];
-
-// Socials array
-export const socials = [
-  {
-    name: 'twitter',
-    url: 'https://twitter.com/arvrtise',
-  },
-  {
-    name: 'linkedin',
-    url: 'https://linkedin.com/showcase/arvrtise',
-  },
-  {
-    name: 'instagram',
-    url: 'https://instagram.com/arvrtise',
-  },
-  {
-    name: 'facebook',
-    url: 'https://facebook.com',
-  },
-];
-
+export default ExploreWorlds;
