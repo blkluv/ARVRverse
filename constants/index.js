@@ -1,3 +1,4 @@
+// Updated exploreWorlds array with clickable imgUrls
 export const exploreWorlds = [
   {
     id: 'world-1',
@@ -31,12 +32,33 @@ export const exploreWorlds = [
   },
 ];
 
+// Generating HTML with clickable images
+const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
+
+exploreWorlds.forEach(world => {
+  const { imgUrl, title, url } = world;
+  const anchor = document.createElement('a');
+  anchor.href = url;
+  anchor.target = '_blank';
+
+  const image = document.createElement('img');
+  image.src = imgUrl;
+  image.alt = title;
+
+  anchor.appendChild(image);
+  exploreWorldsContainer.appendChild(anchor);
+});
+
+// Rest of the code...
+
+// Starting features array
 export const startingFeatures = [
   'Find a world that suits you and you want to enter',
   'Enter the world with positive intentions thinking with your heart',
   'No need to beat around the bush, just stay on the gas and have fun',
 ];
 
+// New features array
 export const newFeatures = [
   {
     imgURL: '/vrpano.svg',
@@ -52,30 +74,29 @@ export const newFeatures = [
   },
 ];
 
+// Insights array
 export const insights = [
   {
     imgUrl: '/planet-06.png',
     title: 'Join our Linked ARVRtise group',
     subtitle:
-      'Tap into the latest and greatest ARVRtising news, memes and events in our ARVRtise group.',
-    url: 'https://www.linkedin.com/groups/9068432/',
+      'Tap into the latest and greatest ARVRtising news, memes and events in our ARVRtise group <a href="https://www.linkedin.com/groups/9068432/" target="_blank">here</a>.',
   },
   {
     imgUrl: '/planet-07.png',
     title: 'ARVRtise blog',
     subtitle:
-      'Tap into the latest AI, AR, NFT, VR, XR news.',
-    url: 'https://www.arvrtise.com/blog-standard/',
+      'Tap into the latest AI, AR, NFT, VR, XR news <a href="https://www.arvrtise.com/blog-standard/" target="_blank">here</a>.',
   },
   {
     imgUrl: '/planet-08.png',
     title: 'Customize Your Metaverse',
     subtitle:
-      'Are you looking to onboard your brand to the metaverse in a customized environment? Contact us to make it a reality.',
-    url: 'https://www.arvrtise.com/custom-arvrtise-metaverse/',
+      'Are you looking to onboard your brand to the metaverse in a customized environment? Contact us to make it a reality <a href="https://www.arvrtise.com/custom-arvrtise-metaverse/" target="_blank">here</a>.',
   },
 ];
 
+// Socials array
 export const socials = [
   {
     name: 'twitter',
@@ -94,3 +115,4 @@ export const socials = [
     url: 'https://facebook.com',
   },
 ];
+
