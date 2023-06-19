@@ -36,6 +36,8 @@ export const exploreWorlds = [
 const ExploreWorlds = () => {
   useEffect(() => {
     const renderClickableImages = async () => {
+      if (typeof document === 'undefined') return;
+
       const exploreWorldsContainer = document.getElementById('exploreWorldsContainer');
 
       if (!exploreWorldsContainer) return;
@@ -53,13 +55,25 @@ const ExploreWorlds = () => {
 
   return (
     <div id="exploreWorldsContainer">
-      {exploreWorlds.map((world) => (
-        <a key={world.id} href={world.url} target="_blank">
-          <img src={world.imgUrl} alt={world.title} />
-        </a>
-      ))}
+      {typeof document !== 'undefined' &&
+        exploreWorlds.map((world) => (
+          <a key={world.id} href={world.url} target="_blank">
+            <img src={world.imgUrl} alt={world.title} />
+          </a>
+        ))}
     </div>
   );
 };
 
-export default ExploreWorlds;
+const HomePage = () => {
+  // Other components or logic for the homepage
+  return (
+    <div>
+      {/* Other content */}
+      <ExploreWorlds />
+      {/* Other content */}
+    </div>
+  );
+};
+
+export default HomePage;
